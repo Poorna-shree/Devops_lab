@@ -20,3 +20,4 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.11'  # Replace with your JDK version
     jdkArchitectureOption: 'x64'
+    script: java -jar gradle\wrapper\gradle-wrapper.jar
