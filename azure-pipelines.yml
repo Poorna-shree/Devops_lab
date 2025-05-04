@@ -7,12 +7,12 @@ pool:
 steps:
   - task: Gradle@3
     inputs:
-      gradleWrapperFile: 'gradlew.bat'          # Windows batch file
+      gradleWrapperFile: 'C:\Users\CHINNU\Desktop\devops lab\gradle_project\poorna\gradlew.bat'          # Windows batch file
       workingDirectory: '.'                     # Root folder
       tasks: 'clean build'                      # Run Gradle build
       options: '-Xmx3072m'                      # Optional memory setting
       publishJUnitResults: true
       testResultsFiles: '**/build/test-results/test/TEST-*.xml'
       javaHomeOption: 'Path'                    # Use custom path, not env var
-      jdkDirectory: 'F:\jdk-17.0.12_windows-x64_bin\jdk-17.0.12\bin'  # Change path to your actual JDK 17 install
+      jdkDirectory: 'F:\jdk-17.0.12_windows-x64_bin\jdk-17.0.12'  # Change path to your actual JDK 17 install
       jdkArchitectureOption: 'x64'
