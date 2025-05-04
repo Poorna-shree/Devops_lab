@@ -1,8 +1,5 @@
-trigger:
-  - master
-
 pool:
-  name: 'Default'  # Your self-hosted agent pool
+  name: 'Default'
 
 steps:
   - task: Gradle@3
