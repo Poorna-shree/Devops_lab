@@ -1,20 +1,18 @@
-# Azure Pipelines for Java project using Gradle Wrapper on Windows with JDK 17
-
 trigger:
   - master
 
 pool:
-  vmImage: 'windows-2022'  # Windows environment
+  name: 'Default'  # Your self-hosted agent pool
 
 steps:
   - task: Gradle@3
     inputs:
-      gradleWrapperFile: 'gradlew.bat'  # Use .bat for Windows
+      gradleWrapperFile: 'gradlew.bat'
       workingDirectory: '.'
       tasks: 'clean build'
       options: '-Xmx3072m'
       publishJUnitResults: true
       testResultsFiles: '**/build/test-results/test/TEST-*.xml'
       javaHomeOption: 'JDKVersion'
-      jdkVersionOption: '1.17'  # Using JDK 17
+      jdkVersionOption: '1.17'
       jdkArchitectureOption: 'x64'
